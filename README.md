@@ -17,3 +17,4 @@ O modelo visa atender todos os requisitos especificados pelo professor Robson, s
 | 12 | `Relacionamento parcial-parcial`                   |        ✅        |      ❌      |       ❌      |
 | 13 | `Entidade Associativa`                             |        ✅        |      ❌      |       ❌      |
 | 14 | `Herança (qualquer tipo)`                          |        ✅        |      ❌      |       ❌      |
+![Image](https://github.com/user-attachments/assets/59ddfd71-57a6-4b9f-b6a1-40b5465c8c55)
