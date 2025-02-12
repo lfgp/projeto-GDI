@@ -77,7 +77,7 @@ Preservada(Cód_região,CNPJ,responsável,Nome_científico);
 
 Nome_científico -> Espécie(Nome_científico)
 
-Orienta(Aluno,Professor!)
+Orienta(Aluno,Professor)
 
 Aluno-> Pesquisador(CPF)
 
