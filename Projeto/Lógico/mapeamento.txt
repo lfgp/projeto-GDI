@@ -1,9 +1,9 @@
 # Entidades
 
+<ins> </ins>
+Pesquisador(<ins>CPF</ins>,instituição);
 
-Pesquisador(<u>CPF</u>,instituição);
-
-Região(<u>Cód_região</u>, coordenadas_latitude, coordenadas _longitude);
+Região(<ins>Cód_região</ins>, coordenadas_latitude, coordenadas _longitude);
 
 Bioma(<u>Cód_região,bioma</u>);
 
