@@ -1,35 +1,35 @@
 # Entidades
 
 
-Pesquisador(CPF,instituição);
+Pesquisador(<u>CPF</u>,instituição);
 
-Região(Cód_região, coordenadas_latitude, coordenadas _longitude);
+Região(<u>Cód_região</u>, coordenadas_latitude, coordenadas _longitude);
 
-Bioma(Cód_região,bioma);
+Bioma(<u>Cód_região,bioma</u>);
 
 Cód_região -> Região(Cód_região)
 
-Espécie(Nome_científico,tax_Reino, tax_Filo, tax_Classe, tax_Ordem, tax_Família, tax_Gênero);
+Espécie(<u>Nome_científico</u>,tax_Reino, tax_Filo, tax_Classe, tax_Ordem, tax_Família, tax_Gênero);
 
 Nome_popular(Nome_científico,nome_popular);
 
 Nome_científico -> Espécie(Nome_científico)
 
-Pesquisa(Título,resultado);
+Pesquisa(<u>Título</u>,resultado);
 
-Congresso(Cód_congresso,ano);
+Congresso(<u>Cód_congresso</u>,ano);
 
-Empresa(CNPJ,nome);
+Empresa(<u>CNPJ</u>,nome);
 
-Pública(CNPJ,órgão_regulador);
+Pública(<u>CNPJ,órgão_regulador</u>);
 
 CNPJ -> Empresa(CNPJ)
 
-Privada(CNPJ,natureza_jurídica);
+Privada(<u>CNPJ,natureza_jurídica</u>);
 
 CNPJ-> Empresa(CNPJ)
 
-Reserva_ambiental(Cód_região,CNPJ,Responsável);
+Reserva_ambiental(<u>Cód_região,CNPJ,Responsável</u>);
 
 Cód_região -> Região(Cód_região)
 
@@ -39,7 +39,7 @@ CNPJ -> Empresa(CNPJ)
 # Relacionamentos
 
 
-Estuda(CPF,Cód_região,Nome_científico,data);
+Estuda(<u>CPF,Cód_região,Nome_científico,data</u>);
 
 CPF -> Pesquisador(CPF)
 
@@ -47,37 +47,37 @@ Cód_região -> Região(Cód_região)
 
 Nome_científico -> Espécie(Nome_científico)
 
-Descobre(Nome_científico_novo, [CPF,Cód_região, Nome_científico, data_estuda],data_descobre);
+Descobre(<u>Nome_científico_novo</u>, [CPF,Cód_região, Nome_científico, data_estuda],data_descobre);
 
 Nome_Científico_novo -> Espécie(Nome_científico)
 
 (CPF,Cód_região,Nome_científico,data_estuda) -> Estuda(CPF,Cód_região,Nome_científico,data)
 
-Faz(CPF,Título);
+Faz(<u>CPF,Título</u>);
 
 CPF -> Pesquisador(CPF)
 
 Título -> Pesquisa(Título)
 
-Financia(CPF,Título,CNPJ);
+Financia(<u,CNPJ</u>,CPF,Título);
 
 (CPF,Título) -> Faz(CPF,Título)
 
 CNPJ -> Empresa(CNPJ)
 
-Apresentada(Título,Cód_congresso);
+Apresentada(<u>Título,Cód_congresso</u>);
 
 Título -> Pesquisa(Título)
 
 Cód_congresso -> Congresso(Cód_congresso)
 
-Preservada(Cód_região,CNPJ,responsável,Nome_científico);
+Preservada(<u>Cód_região,CNPJ,responsável,Nome_científico</u>);
 
 (Cód_região,CNPJ,Responsável) -> Reserva_ambiental(Cód_região,CNPJ,Responsável)
 
 Nome_científico -> Espécie(Nome_científico)
 
-Orienta(Aluno,Professor)
+Orienta(<u>Aluno</u>,Professor)
 
 Aluno-> Pesquisador(CPF)
 
