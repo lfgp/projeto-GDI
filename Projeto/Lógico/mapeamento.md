@@ -18,8 +18,7 @@ Pesquisa(<ins>Título</ins>,resultado);
 
 Congresso(<ins>Cód_congresso</ins>,ano);
 
-Empresa(<ins>CNPJ</ins>,nome,CPF,Título);
-(CPF,Título) -> Faz(CPF,Título)
+Empresa(<ins>CNPJ</ins>,nome);
 
 Pública(<ins>CNPJ,órgão_regulador</ins>);
 
