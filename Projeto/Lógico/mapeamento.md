@@ -76,7 +76,7 @@ Preservada(<ins>Cód_região,CNPJ,responsável,Nome_científico</ins>);
 
 Nome_científico -> Espécie(Nome_científico)
 
-Orienta(<u>Aluno</u>,Professor)
+Orienta(<ins>Aluno<ins>,Professor!)
 
 Aluno-> Pesquisador(CPF)
 
