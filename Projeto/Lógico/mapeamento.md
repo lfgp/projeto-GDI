@@ -4,7 +4,7 @@ Pesquisador(<ins>CPF</ins>,instituição);
 
 Região(<ins>Cód_região</ins>, coordenadas_latitude, coordenadas _longitude);
 
-Bioma(<ins>Cód_região,bioma</ins>;
+Bioma(<ins>Cód_região,bioma</ins>);
 
     Cód_região -> Região(Cód_região)
 
