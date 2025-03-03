@@ -58,7 +58,7 @@ CPF -> Pesquisador(CPF)
 
 Título -> Pesquisa(Título)
 
-Financia(<ins>CNPJ</ins>,CPF,Título);
+Financia(<ins>CNPJ,CPF,Título</ins>);
 
 (CPF,Título) -> Faz(CPF,Título)
 
