@@ -46,7 +46,7 @@ Cód_região -> Região(Cód_região)
 
 Nome_científico -> Espécie(Nome_científico)
 
-Descobre(<ins>Nome_científico_novo</ins>, [CPF,Cód_região, Nome_científico, data_estuda],data_descobre);
+Descobre(<ins>Nome_científico_novo</ins>, [CPF,Cód_região, Nome_científico, data_estuda]!,data_descobre);
 
 Nome_Científico_novo -> Espécie(Nome_científico)
 
