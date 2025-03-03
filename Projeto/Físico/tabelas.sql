@@ -48,7 +48,7 @@ create table RESERVA_AMBIENTAL(
     
         Constraint fk_Reserva_EMPRESA foreign key (CNPJ_reserva) references EMPRESA(CNPJ),
         Constraint fk_Reserva_REGIÃO foreign key (Cód_região_reserva) references REGIÃO(Cód_região),
-        Constraint pk_Reserva_Ambiental primary key (CNPJ_reserva,Cód_região_reserva)
+        Constraint pk_Reserva_Ambiental primary key (CNPJ_reserva,Cód_região_reserva,Responsável)
 )
 
 
