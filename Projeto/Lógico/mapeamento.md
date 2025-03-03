@@ -6,13 +6,13 @@ Região(<ins>Cód_região</ins>, coordenadas_latitude, coordenadas _longitude);
 
 Bioma(<ins>Cód_região,bioma</ins>;
 
-Cód_região -> Região(Cód_região)
+  Cód_região -> Região(Cód_região)
 
 Espécie(<ins>Nome_científico</ins>,tax_Reino, tax_Filo, tax_Classe, tax_Ordem, tax_Família, tax_Gênero);
 
 Nome_popular(Nome_científico,nome_popular);
 
-Nome_científico -> Espécie(Nome_científico)
+  Nome_científico -> Espécie(Nome_científico)
 
 Pesquisa(<ins>Título</ins>,resultado);
 
@@ -22,17 +22,17 @@ Empresa(<ins>CNPJ</ins>,nome);
 
 Pública(<ins>CNPJ,órgão_regulador</ins>);
 
-CNPJ -> Empresa(CNPJ)
+  CNPJ -> Empresa(CNPJ)
 
 Privada(<ins>CNPJ,natureza_jurídica</ins>);
 
-CNPJ-> Empresa(CNPJ)
+  CNPJ-> Empresa(CNPJ)
 
 Reserva_ambiental(<ins>Cód_região,CNPJ,Responsável</ins>);
 
-Cód_região -> Região(Cód_região)
+  Cód_região -> Região(Cód_região)
 
-CNPJ -> Empresa(CNPJ)
+  CNPJ -> Empresa(CNPJ)
 
 
 # Relacionamentos
@@ -40,44 +40,44 @@ CNPJ -> Empresa(CNPJ)
 
 Estuda(<ins>CPF,Cód_região,Nome_científico,data</ins>);
 
-CPF -> Pesquisador(CPF)
+  CPF -> Pesquisador(CPF)
 
-Cód_região -> Região(Cód_região)
+  Cód_região -> Região(Cód_região)
 
-Nome_científico -> Espécie(Nome_científico)
+  Nome_científico -> Espécie(Nome_científico)
 
 Descobre(<ins>Nome_científico_novo</ins>, [CPF,Cód_região, Nome_científico, data_estuda]!,data_descobre);
 
-Nome_Científico_novo -> Espécie(Nome_científico)
+  Nome_Científico_novo -> Espécie(Nome_científico)
 
-(CPF,Cód_região,Nome_científico,data_estuda) -> Estuda(CPF,Cód_região,Nome_científico,data)
+  (CPF,Cód_região,Nome_científico,data_estuda) -> Estuda(CPF,Cód_região,Nome_científico,data)
 
 Faz(<ins>CPF,Título</ins>);
 
-CPF -> Pesquisador(CPF)
+  CPF -> Pesquisador(CPF)
 
-Título -> Pesquisa(Título)
+  Título -> Pesquisa(Título)
 
 Financia(<ins>CNPJ,CPF,Título</ins>);
 
-(CPF,Título) -> Faz(CPF,Título)
+  (CPF,Título) -> Faz(CPF,Título)
 
-CNPJ -> Empresa(CNPJ)
+  CNPJ -> Empresa(CNPJ)
 
 Apresentada(<ins>Título,Cód_congresso</ins>);
 
-Título -> Pesquisa(Título)
+  Título -> Pesquisa(Título)
 
-Cód_congresso -> Congresso(Cód_congresso)
+  Cód_congresso -> Congresso(Cód_congresso)
 
 Preservada(<ins>Cód_região,CNPJ,responsável,Nome_científico</ins>);
 
-(Cód_região,CNPJ,Responsável) -> Reserva_ambiental(Cód_região,CNPJ,Responsável)
+  (Cód_região,CNPJ,Responsável) -> Reserva_ambiental(Cód_região,CNPJ,Responsável)
 
-Nome_científico -> Espécie(Nome_científico)
+  Nome_científico -> Espécie(Nome_científico)
 
 Orienta(<ins>Aluno<ins>,Professor!)
 
-Aluno-> Pesquisador(CPF)
+  Aluno-> Pesquisador(CPF)
 
-Professor -> Pesquisador(CPF)
+  Professor -> Pesquisador(CPF)
