@@ -6,7 +6,7 @@ Região(<ins>Cód_região</ins>, coordenadas_latitude, coordenadas _longitude);
 
 Bioma(<ins>Cód_região,bioma</ins>;
 
-  Cód_região -> Região(Cód_região)
+    Cód_região -> Região(Cód_região)
 
 Espécie(<ins>Nome_científico</ins>,tax_Reino, tax_Filo, tax_Classe, tax_Ordem, tax_Família, tax_Gênero);
 
