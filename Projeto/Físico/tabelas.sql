@@ -42,8 +42,8 @@ create table CONGRESSO(
 
 
 create table RESERVA_AMBIENTAL(
-        CNPJ_reserva INTEGER not null,
-        Cód_região_reserva INTEGER not null,
+        CNPJ_reserva INTEGER,
+        Cód_região_reserva INTEGER,
         Responsável VARCHAR(20),
     
         Constraint fk_Reserva_EMPRESA foreign key (CNPJ_reserva) references EMPRESA(CNPJ),
@@ -105,14 +105,16 @@ create table ESTUDA(
 
 
 create table DESCOBRE(
-    	CPF_D VARCHAR(20), 
-    	Cód_região_D INTEGER, 
-    	Nome_científico_D VARCHAR(30), 
-        Data_E_D DATE, 
+    	CPF_D VARCHAR(20) not null, 
+    	Cód_região_D INTEGER not null, 
+    	Nome_científico_D VARCHAR(30) not null, 
+      	Data_E_D DATE not null, 
+      	Nome_científico_novo VARCHAR(30),
     	Data_D DATE,
  
     	Constraint fk_DESCOBRE_ESTUDA foreign key (CPF_D,Cód_região_D,Nome_científico_D,Data_E_D) references ESTUDA(CPF_E,Cód_região_E,Nome_científico_E,Data_E), 
-    	Constraint pk_DESCOBRE primary key (CPF_D,Cód_região_D,Nome_científico_D,Data_E_D,Data_D) 
+        Constraint ak_DESCOBRE_ESTUDA unique (CPF_D,Cód_região_D,Nome_científico_D,Data_E_D), 
+    	Constraint pk_DESCOBRE primary key (Nome_científico_novo) 
 )
 
 
