@@ -54,7 +54,7 @@ create table RESERVA_AMBIENTAL(
 
 create table ORIENTA(
     	CPF_Aluno VARCHAR(20),
-    	CPF_Professor VARCHAR(20),
+    	CPF_Professor VARCHAR(20) not null,
 
     	Constraint fk_ORIENTA_Aluno foreign key (CPF_Aluno) references PESQUISADOR(CPF),
     	Constraint fk_ORIENTA_Professor foreign key (CPF_Professor) references PESQUISADOR(CPF),
