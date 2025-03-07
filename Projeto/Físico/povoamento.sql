@@ -23,3 +23,16 @@ INSERT INTO ESPECIE VALUES ('Amaranthus viridis','bredo, caruru','Plantae','Magn
 INSERT INTO ESPECIE VALUES ('Rhea americana','ema, nandu, guaripé','Animalia','Chordata','Ave','Struthioniformes','Rheidae','Rhea');
 INSERT INTO ESPECIE VALUES ('Paullinia cupana','guaranazeiro, guaraná','Plantae','Magnoliophyta','Magnoliopsida','Sapindales','Sapindaceae','Paullinia');
 INSERT INTO ESPECIE VALUES ('Myloplus sauron','piranha vegetariana','Animalia','Chordata','Actinopterygii','Characiformes','Serrasalmidae','Myloplus');
+
+INSERT INTO ESTUDA VALUES ('1111','1','Panthera onca',TO_DATE('12/03/2023','DD/MM/YYYY'));
+INSERT INTO ESTUDA VALUES ('2222','2','Amaranthus viridis',TO_DATE('10/05/2022','DD/MM/YYYY'));
+INSERT INTO ESTUDA VALUES ('3333','2','Amaranthus viridis',TO_DATE('10/05/2022','DD/MM/YYYY'));
+INSERT INTO ESTUDA VALUES ('4444','3','Panthera onca',TO_DATE('12/03/2023','DD/MM/YYYY'));
+INSERT INTO ESTUDA VALUES ('5555','4','Rhea americana',TO_DATE('08/11/2024','DD/MM/YYYY'));
+INSERT INTO ESTUDA VALUES ('6666','4','Rhea americana',TO_DATE('08/11/2024','DD/MM/YYYY'));
+INSERT INTO ESTUDA VALUES ('7777','5','Panthera onca',TO_DATE('17/02/2023','DD/MM/YYYY'));
+INSERT INTO ESTUDA VALUES ('8888','2','Amaranthus viridis',TO_DATE('10/05/2022','DD/MM/YYYY'));
+INSERT INTO ESTUDA VALUES ('9999','1','Paullinia cupana',TO_DATE('01/07/2023','DD/MM/YYYY'));
+INSERT INTO ESTUDA VALUES ('10101010','3','Handroanthus albus',TO_DATE('22/06/2019','DD/MM/YYYY'));
+
+INSERT INTO DESCOBRE VALUES ('1111','1','Panthera onca',TO_DATE('12/03/2023','DD/MM/YYYY'),'Myloplus sauron',TO_DATE('11/03/2023','DD/MM/YYYY'));
