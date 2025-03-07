@@ -20,4 +20,4 @@ O modelo visa atender todos os requisitos especificados pelo professor Robson, s
 
 
 # Modelagem EERCASE
-![Image](https://github.com/user-attachments/assets/59ddfd71-57a6-4b9f-b6a1-40b5465c8c55)
+![Image](https://github.com/user-attachments/assets/1edc69a3-1268-4e8a-a22b-c4b63ede1edf)
