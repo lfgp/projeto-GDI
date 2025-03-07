@@ -20,4 +20,4 @@ O modelo visa atender todos os requisitos especificados pelo professor Robson, s
 
 
 # Modelagem EERCASE
-[![Image](https://github.com/user-attachments/assets/1edc69a3-1268-4e8a-a22b-c4b63ede1edf)](https://github.com/lfgp/projeto-GDI/issues/3#issue-2902963944)
+![Image](https://github.com/user-attachments/assets/fb6a0663-09a5-4300-b63a-0564d90025bf)
