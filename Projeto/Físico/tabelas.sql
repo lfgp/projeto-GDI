@@ -1,6 +1,3 @@
-REM   Script: PesquisadorEspécie
-REM   criação de tabelas
-
 create table ESPÉCIE( 
   	Nome_científico VARCHAR(30), 
   	Nome_popular VARCHAR(30), 
