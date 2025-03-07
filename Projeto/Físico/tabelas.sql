@@ -25,13 +25,29 @@ create table EMPRESA(
   	constraint pk_empresa primary key (CNPJ) 
 );
 
+create table PUBLICA( 
+    CNPJ_P INTEGER, 
+    Órgão_Regulador VARCHAR(30), 
+     
+    constraint fk_EMPRESAPUBLICA foreign key (CNPJ_P) references EMPRESA(CNPJ), 
+    constraint pk_PUBLICA primary key (CNPJ_P,Órgão_Regulador) 
+);
+
+create table PRIVADA(
+    CNPJ_Pv INTEGER,
+    Natureza_Jurídica VARCHAR(30),
+    
+    constraint fk_EMPRESAPRIVADA foreign key (CNPJ_Pv) references EMPRESA(CNPJ),
+    constraint pk_PRIVADA primary key (CNPJ_Pv,Natureza_Jurídica)
+);
+
 create table PESQUISADOR(
         CPF VARCHAR(20),
         Instituição VARCHAR(30),
         Nome VARCHAR(20),
         Especialização VARCHAR(20),
         constraint pk_pequisador primary key (CPF) 
-)
+);
 
 
 create table PESQUISA(
@@ -39,7 +55,7 @@ create table PESQUISA(
         Resultado VARCHAR(50),
         Metodologia VARCHAR(50),
         constraint pk_pequisa primary key (Título) 
-)
+);
 
 
 create table CONGRESSO(
@@ -47,7 +63,7 @@ create table CONGRESSO(
         Ano INTEGER,
         Sigla VARCHAR(30),
         constraint pk_Congresso primary key (Tema) 
-)
+);
 
 
 create table RESERVA_AMBIENTAL(
@@ -58,7 +74,7 @@ create table RESERVA_AMBIENTAL(
         Constraint fk_Reserva_EMPRESA foreign key (CNPJ_reserva) references EMPRESA(CNPJ),
         Constraint fk_Reserva_REGIAO foreign key (Cód_região_reserva) references REGIAO(Cód_região),
         Constraint pk_Reserva_Ambiental primary key (CNPJ_reserva,Cód_região_reserva)
-)
+);
 
 
 create table ORIENTA(
@@ -78,7 +94,7 @@ create table APRESENTADA(
     	Constraint fk_APRESENTADA_CONGRESSO foreign key (Tema_A) references CONGRESSO(Tema),
     	Constraint fk_APRESENTADA_PESQUISA foreign key (Título_A) references PESQUISA(Título),
     	Constraint pk_APRESENTADA primary key (Tema_A,Título_A)
-)
+);
 
 
 create table FAZ(
@@ -87,7 +103,7 @@ create table FAZ(
     	Constraint fk_FAZ_PESQUISADOR foreign key (CPF_F) references PESQUISADOR(CPF),
     	Constraint fk_FAZ_PESQUISA foreign key (Título_F) references PESQUISA(Título),
     	Constraint pk_FAZ primary key (CPF_F,Título_F)
-)
+);
 
 
 create table FINANCIA(
@@ -98,7 +114,7 @@ create table FINANCIA(
     	Constraint fk_FINANCIA_FAZ foreign key (CPF_FI,Título_FI) references FAZ(CPF_F,Título_F),
     	Constraint fk_FINANCIA_EMPRESA foreign key (CNPJ_FI) references EMPRESA(CNPJ),
     	Constraint pk_FINANCIA primary key (CPF_FI,Título_FI,CNPJ_FI)
-)
+);
 
 
 create table ESTUDA(
@@ -111,7 +127,7 @@ create table ESTUDA(
     	Constraint fk_ESTUDA_REGIAO foreign key (Cód_região_E) references REGIAO(Cód_região),
     	Constraint fk_ESTUDA_ESPECIE foreign key (Nome_Científico_E) references ESPECIE(Nome_científico),
     	Constraint pk_ESTUDA primary key (CPF_E,Cód_região_E,Nome_científico_E,Data_E)
-)
+);
 
 
 create table DESCOBRE(
@@ -125,6 +141,4 @@ create table DESCOBRE(
     	Constraint fk_DESCOBRE_ESTUDA foreign key (CPF_D,Cód_região_D,Nome_científico_D,Data_E_D) references ESTUDA(CPF_E,Cód_região_E,Nome_científico_E,Data_E), 
         Constraint ak_DESCOBRE_ESTUDA unique (CPF_D,Cód_região_D,Nome_científico_D,Data_E_D), 
     	Constraint pk_DESCOBRE primary key (Nome_científico_novo) 
-)
-
-
+);
