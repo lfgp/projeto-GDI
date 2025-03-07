@@ -1,0 +1,133 @@
+REM   Script: PesquisadorEspécie
+REM   criação de tabelas
+
+create table ESPÉCIE( 
+  	Nome_científico VARCHAR(30), 
+  	Nome_popular VARCHAR(30), 
+        Taxonomia_Reino VARCHAR(30), 
+ 	Taxonomia_Filo VARCHAR(30), 
+        Taxonomia_Classe VARCHAR(30),
+        Taxonomia_Ordem VARCHAR(30),
+        Taxonomia_Família VARCHAR(30),
+        Taxonomia_Gênero VARCHAR(30),
+        constraint pk_Nome_científico primary key (Nome_científico) 
+);
+
+create table REGIÃO( 
+        Cód_região INTEGER, 
+        Coordenadas_Latitude INTEGER, 
+        Coordenadas_Longitude INTEGER,
+        Bioma VARCHAR(40),
+        constraint pk_Cód_região primary key (Cód_região) 
+);
+
+create table EMPRESA( 
+  	CNPJ INTEGER, 
+  	Nome_Fantasia  VARCHAR(30),
+        Ramo VARCHAR(10), 
+  	constraint pk_CNPJ primary key (CNPJ) 
+);
+
+create table PESQUISADOR(
+        CPF VARCHAR(20),
+        Instituição VARCHAR(30),
+        Nome VARCHAR(20),
+        Especialização VARCHAR(20),
+        constraint pk_pequisador primary key (CPF) 
+)
+
+
+create table PESQUISA(
+        Título VARCHAR(30),
+        Resultado VARCHAR(50),
+        Metodologia VARCHAR(50),
+        constraint pk_pequisa primary key (Título) 
+)
+
+
+create table CONGRESSO(
+        Tema VARCHAR(30),
+        Ano INTEGER,
+        Sigla VARCHAR(30),
+        constraint pk_Congresso primary key (Tema) 
+)
+
+
+create table RESERVA_AMBIENTAL(
+        CNPJ_reserva INTEGER,
+        Cód_região_reserva INTEGER,
+        Responsável VARCHAR(20),
+    
+        Constraint fk_Reserva_EMPRESA foreign key (CNPJ_reserva) references EMPRESA(CNPJ),
+        Constraint fk_Reserva_REGIÃO foreign key (Cód_região_reserva) references REGIÃO(Cód_região),
+        Constraint pk_Reserva_Ambiental primary key (CNPJ_reserva,Cód_região_reserva)
+)
+
+
+create table ORIENTA(
+    	CPF_Aluno VARCHAR(20),
+    	CPF_Professor VARCHAR(20) not null,
+
+    	Constraint fk_ORIENTA_Aluno foreign key (CPF_Aluno) references PESQUISADOR(CPF),
+    	Constraint fk_ORIENTA_Professor foreign key (CPF_Professor) references PESQUISADOR(CPF),
+    	Constraint pk_ORIENTA_Aluno primary key (CPF_Aluno)
+)
+
+
+create table APRESENTADA(
+    	Tema_A VARCHAR(30),
+    	Título_A VARCHAR(30),
+        Situação VARCHAR(30),
+    	Constraint fk_APRESENTADA_CONGRESSO foreign key (Tema_A) references CONGRESSO(Tema),
+    	Constraint fk_APRESENTADA_PESQUISA foreign key (Título_A) references PESQUISA(Título),
+    	Constraint pk_APRESENTADA primary key (Tema_A,Título_A)
+)
+
+
+create table FAZ(
+    	CPF_F VARCHAR(20),
+    	Título_F VARCHAR(30),
+    	Constraint fk_FAZ_PESQUISADOR foreign key (CPF_F) references PESQUISADOR(CPF),
+    	Constraint fk_FAZ_PESQUISA foreign key (Título_F) references PESQUISA(Título),
+    	Constraint pk_FAZ primary key (CPF_F,Título_F)
+)
+
+
+create table FINANCIA(
+    	CPF_FI VARCHAR(20),
+    	Título_FI VARCHAR(30),
+    	CNPJ_FI INTEGER,
+
+    	Constraint fk_FINANCIA_FAZ foreign key (CPF_FI,Título_FI) references FAZ(CPF_F,Título_F),
+    	Constraint fk_FINANCIA_EMPRESA foreign key (CNPJ_FI) references EMPRESA(CNPJ),
+    	Constraint pk_FINANCIA primary key (CPF_FI,Título_FI,CNPJ_FI)
+)
+
+
+create table ESTUDA(
+    	CPF_E VARCHAR(20),
+    	Cód_região_E INTEGER,
+    	Nome_científico_E VARCHAR(30),
+        Data_E DATE,
+
+    	Constraint fk_ESTUDA_PESQUISADOR foreign key (CPF_E) references PESQUISADOR(CPF),
+    	Constraint fk_ESTUDA_REGIÃO foreign key (Cód_região_E) references REGIÃO(Cód_região),
+    	Constraint fk_ESTUDA_ESPÉCIE foreign key (Nome_Científico_E) references ESPÉCIE(Nome_científico),
+    	Constraint pk_ESTUDA primary key (CPF_E,Cód_região_E,Nome_científico_E,Data_E)
+)
+
+
+create table DESCOBRE(
+    	CPF_D VARCHAR(20) not null, 
+    	Cód_região_D INTEGER not null, 
+    	Nome_científico_D VARCHAR(30) not null, 
+      	Data_E_D DATE not null, 
+      	Nome_científico_novo VARCHAR(30),
+    	Data_D DATE,
+ 
+    	Constraint fk_DESCOBRE_ESTUDA foreign key (CPF_D,Cód_região_D,Nome_científico_D,Data_E_D) references ESTUDA(CPF_E,Cód_região_E,Nome_científico_E,Data_E), 
+        Constraint ak_DESCOBRE_ESTUDA unique (CPF_D,Cód_região_D,Nome_científico_D,Data_E_D), 
+    	Constraint pk_DESCOBRE primary key (Nome_científico_novo) 
+)
+
+
