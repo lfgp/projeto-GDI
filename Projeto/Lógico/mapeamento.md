@@ -1,6 +1,6 @@
 # Entidades
 
-Pesquisador(<ins>CPF</ins>,instituição);
+Pesquisador(<ins>CPF</ins>,instituição,nome,especialização);
 
 Região(<ins>Cód_região</ins>, coordenadas_latitude, coordenadas _longitude);
 
@@ -14,11 +14,11 @@ Nome_popular(Nome_científico,nome_popular);
 
       Nome_científico -> Espécie(Nome_científico)
 
-Pesquisa(<ins>Título</ins>,resultado);
+Pesquisa(<ins>Título</ins>,resultado,metodologia);
 
-Congresso(<ins>Cód_congresso</ins>,ano);
+Congresso(<ins>Tema</ins>,ano,sigla);
 
-Empresa(<ins>CNPJ</ins>,nome);
+Empresa(<ins>CNPJ</ins>,nome_fantasia);
 
 Pública(<ins>CNPJ,órgão_regulador</ins>);
 
@@ -64,11 +64,11 @@ Financia(<ins>CNPJ,CPF,Título</ins>);
 
       CNPJ -> Empresa(CNPJ)
 
-Apresentada(<ins>Título,Cód_congresso</ins>);
+Apresentada(<ins>Título,Tema</ins>,situação);
 
       Título -> Pesquisa(Título)
 
-      Cód_congresso -> Congresso(Cód_congresso)
+      Tema -> Congresso(Tema)
 
 Preservada(<ins>Cód_região,CNPJ,responsável,Nome_científico</ins>);
 
