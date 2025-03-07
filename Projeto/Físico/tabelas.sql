@@ -1,4 +1,4 @@
-create table ESPÉCIE( 
+create table ESPECIE( 
   	Nome_científico VARCHAR(30), 
   	Nome_popular VARCHAR(30), 
         Taxonomia_Reino VARCHAR(30), 
@@ -7,22 +7,22 @@ create table ESPÉCIE(
         Taxonomia_Ordem VARCHAR(30),
         Taxonomia_Família VARCHAR(30),
         Taxonomia_Gênero VARCHAR(30),
-        constraint pk_Nome_científico primary key (Nome_científico) 
+        constraint pk_especie primary key (Nome_científico) 
 );
 
-create table REGIÃO( 
+create table REGIAO( 
         Cód_região INTEGER, 
         Coordenadas_Latitude INTEGER, 
         Coordenadas_Longitude INTEGER,
         Bioma VARCHAR(40),
-        constraint pk_Cód_região primary key (Cód_região) 
+        constraint pk_regiao primary key (Cód_região) 
 );
 
 create table EMPRESA( 
   	CNPJ INTEGER, 
   	Nome_Fantasia  VARCHAR(30),
         Ramo VARCHAR(10), 
-  	constraint pk_CNPJ primary key (CNPJ) 
+  	constraint pk_empresa primary key (CNPJ) 
 );
 
 create table PESQUISADOR(
@@ -56,7 +56,7 @@ create table RESERVA_AMBIENTAL(
         Responsável VARCHAR(20),
     
         Constraint fk_Reserva_EMPRESA foreign key (CNPJ_reserva) references EMPRESA(CNPJ),
-        Constraint fk_Reserva_REGIÃO foreign key (Cód_região_reserva) references REGIÃO(Cód_região),
+        Constraint fk_Reserva_REGIAO foreign key (Cód_região_reserva) references REGIAO(Cód_região),
         Constraint pk_Reserva_Ambiental primary key (CNPJ_reserva,Cód_região_reserva)
 )
 
@@ -108,8 +108,8 @@ create table ESTUDA(
         Data_E DATE,
 
     	Constraint fk_ESTUDA_PESQUISADOR foreign key (CPF_E) references PESQUISADOR(CPF),
-    	Constraint fk_ESTUDA_REGIÃO foreign key (Cód_região_E) references REGIÃO(Cód_região),
-    	Constraint fk_ESTUDA_ESPÉCIE foreign key (Nome_Científico_E) references ESPÉCIE(Nome_científico),
+    	Constraint fk_ESTUDA_REGIAO foreign key (Cód_região_E) references REGIAO(Cód_região),
+    	Constraint fk_ESTUDA_ESPECIE foreign key (Nome_Científico_E) references ESPECIE(Nome_científico),
     	Constraint pk_ESTUDA primary key (CPF_E,Cód_região_E,Nome_científico_E,Data_E)
 )
 
