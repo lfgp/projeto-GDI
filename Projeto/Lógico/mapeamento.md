@@ -64,7 +64,7 @@ Financia(<ins>CNPJ,CPF,Título</ins>);
 
       CNPJ -> Empresa(CNPJ)
 
-Apresentada(<ins>Título,Tema</ins>,situação);
+Apresentada(<ins>Título,Tema,situação</ins>);
 
       Título -> Pesquisa(Título)
 
