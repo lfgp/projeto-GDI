@@ -71,3 +71,34 @@ INSERT INTO RESERVA_AMBIENTAL VALUES ('33592510000154','4','Vale S/A');
 INSERT INTO RESERVA_AMBIENTAL VALUES ('89637490000145','5','Companhia Klabin');
 INSERT INTO RESERVA_AMBIENTAL VALUES ('11137051007946','5','Grupo Boticário');
 
+INSERT INTO PESQUISA VALUES ('O impacto da criação de cosméticos com plantas nativas da amazônia','Possível extinção em menos de 10 anos.','Observação na quantidade de plantas da região nos últimos 5 anos.');
+INSERT INTO PESQUISA VALUES ('A crise causada pela radiação nos animais aquáticos','Grandes perdas de espécies devido a morte por radiação, gerando uma reação em cadeia.','Relatório de outras catástrofes por radiação nuclear e simulações no computador.');
+INSERT INTO PESQUISA VALUES ('Alteração no habitat das aves e seu alimento com a construção de antenas em áreas remotas','Migração forçada em espécies locais devido às construções.','Relatos de aves não migratórias aparecendo em locais indevidos, afetando na predação e alimentação das espécies nativas.');
+INSERT INTO PESQUISA VALUES ('Como a vegetação do Cerrado sobrevive às queimadas naturais','Revolução no combate de incêndios florestais e preservação de áreas mais secas.','Análise laboratorial e estudo de anos em plantas do bioma.');
+INSERT INTO PESQUISA VALUES ('Uma nova fonte alimentícia resurge no nordeste em meio ao aumento da cesta básica','Povos atuais redescobrem planta que já era utilizada por indígenas na alimentação.','Estudo base na cultura indígena, povos mais antigos e pessoas de baixa renda em situações extremas.');
+INSERT INTO PESQUISA VALUES ('Contaminação das plantas através de metais pesados explorados no solo','Utilização de métodos agressivos contaminam o solo, consequentemente as plantas na região explorada.','Estudo de 20 anos realizado nas regiões de exploração revelam que as plantas ainda contém resquícios de contaminação.');
+
+INSERT INTO CONGRESSO VALUES('Amazônia em alerta, os perigos do incêndio na fauna e flora.','2024','CBMA');
+INSERT INTO CONGRESSO VALUES('A grande diversidade da flora nordestina.','2025','CNBIO');
+INSERT INTO CONGRESSO VALUES('A beleza que destrói a natureza.','2022','CBMA');
+INSERT INTO CONGRESSO VALUES('Alteração de habitat e seus perigos.','2023','CNBIO');
+
+INSERT INTO FAZ VALUES('10101010','O impacto da criação de cosméticos com plantas nativas da amazônia');
+INSERT INTO FAZ VALUES('1111','A crise causada pela radiação nos animais aquáticos');
+INSERT INTO FAZ VALUES('7777','Alteração no habitat das aves e seu alimento com a construção de antenas em áreas remotas');
+INSERT INTO FAZ VALUES('9999','Como a vegetação do Cerrado sobrevive às queimadas naturais');
+INSERT INTO FAZ VALUES('3333','Uma nova fonte alimentícia resurge no nordeste em meio ao aumento da cesta básica');
+INSERT INTO FAZ VALUES('6666','Contaminação das plantas através de metais pesados explorados no solo');
+
+INSERT INTO FINANCIA VALUES('10101010','O impacto da criação de cosméticos com plantas nativas da amazônia','71673990000177');
+INSERT INTO FINANCIA VALUES('1111','A crise causada pela radiação nos animais aquáticos','18910028000121');
+INSERT INTO FINANCIA VALUES('7777','Alteração no habitat das aves e seu alimento com a construção de antenas em áreas remotas','00336701000104');
+INSERT INTO FINANCIA VALUES('9999','Como a vegetação do Cerrado sobrevive às queimadas naturais','89637490000145');
+INSERT INTO FINANCIA VALUES('6666','Contaminação das plantas através de metais pesados explorados no solo','33592510000154');
+
+INSERT INTO APRESENTADA VALUES('A beleza que destrói a natureza.','O impacto da criação de cosméticos com plantas nativas da amazônia','Aprovado');
+INSERT INTO APRESENTADA VALUES('Amazônia em alerta, os perigos do incêndio na fauna e flora.','O impacto da criação de cosméticos com plantas nativas da amazônia','Reprovado');
+INSERT INTO APRESENTADA VALUES('Amazônia em alerta, os perigos do incêndio na fauna e flora.','Como a vegetação do Cerrado sobrevive às queimadas naturais','Aprovado');
+INSERT INTO APRESENTADA VALUES('A grande diversidade da flora nordestina.','Uma nova fonte alimentícia resurge no nordeste em meio ao aumento da cesta básica','Aprovado');
+INSERT INTO APRESENTADA VALUES('Alteração de habitat e seus perigos.','Contaminação das plantas através de metais pesados explorados no solo','Reprovado');
+INSERT INTO APRESENTADA VALUES('Alteração de habitat e seus perigos.','Alteração no habitat das aves e seu alimento com a construção de antenas em áreas remotas','Aprovado');
