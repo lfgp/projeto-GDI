@@ -73,7 +73,7 @@ create table RESERVA_AMBIENTAL(
     
         Constraint fk_Reserva_EMPRESA foreign key (CNPJ_reserva) references EMPRESA(CNPJ),
         Constraint fk_Reserva_REGIAO foreign key (Cód_região_reserva) references REGIAO(Cód_região),
-        Constraint pk_Reserva_Ambiental primary key (CNPJ_reserva,Cód_região_reserva)
+        Constraint pk_Reserva_Ambiental primary key (CNPJ_reserva,Cód_região_reserva,Responsável)
 );
 
 
@@ -141,4 +141,15 @@ create table DESCOBRE(
     	Constraint fk_DESCOBRE_ESTUDA foreign key (CPF_D,Cód_região_D,Nome_científico_D,Data_E_D) references ESTUDA(CPF_E,Cód_região_E,Nome_científico_E,Data_E), 
         Constraint ak_DESCOBRE_ESTUDA unique (CPF_D,Cód_região_D,Nome_científico_D,Data_E_D), 
     	Constraint pk_DESCOBRE primary key (Nome_científico_novo) 
+);
+
+create table PRESERVADA(
+    	CNPJ_Pr INTEGER,
+        Cód_região_Pr INTEGER,
+        Responsável_Pr VARCHAR(20),
+    	Nome_científico_Pr VARCHAR(30), 
+    	Quantidade_Pr INTEGER,
+    	Constraint fk_PRESERVADA_RESERVA foreign key (CNPJ_Pr,Cód_região_Pr,Responsável_Pr) references RESERVA_AMBIENTAL(CNPJ_reserva,Cód_região_reserva,Responsável),
+    	Constraint fk_PRESERVADA_ESPECIE foreign key (Nome_científico_Pr) references ESPECIE(Nome_científico),
+    	Constraint pk_PRESERVADA primary key (CNPJ_Pr,Cód_região_Pr,Responsável_Pr,Nome_científico_Pr)
 );
