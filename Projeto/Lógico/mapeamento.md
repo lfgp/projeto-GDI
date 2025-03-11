@@ -70,7 +70,7 @@ Apresentada(<ins>Título,Tema,situação</ins>);
 
       Tema -> Congresso(Tema)
 
-Preservada(<ins>Cód_região,CNPJ,responsável,Nome_científico</ins>);
+Preservada(<ins>Cód_região,CNPJ,responsável,Nome_científico</ins>,quantidade);
 
       (Cód_região,CNPJ,Responsável) -> Reserva_ambiental(Cód_região,CNPJ,Responsável)
 
