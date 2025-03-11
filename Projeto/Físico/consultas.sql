@@ -6,7 +6,7 @@ HAVING COUNT(*) > 3;
 
 -- Junção interna
 SELECT Nome, Título
-FROM PESQUISADOR INNER JOIN FAZ ON (CPF = CPF_F) INNER JOIN PESQUISA ON (Título_F = Título)
+FROM PESQUISADOR INNER JOIN FAZ ON (CPF = CPF_F) INNER JOIN PESQUISA ON (Título_F = Título);
 
  -- Junção externa
 SELECT CPF, Nome
