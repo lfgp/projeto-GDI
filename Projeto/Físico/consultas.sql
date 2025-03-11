@@ -4,6 +4,30 @@ FROM PESQUISADOR
 GROUP BY Especialização
 HAVING COUNT(*) > 3;
 
+-- Junção interna
+SELECT Nome, Título
+FROM PESQUISADOR INNER JOIN FAZ ON (CPF = CPF_F) INNER JOIN PESQUISA ON (Título_F = Título)
+
+ -- Junção externa
+SELECT CPF, Nome
+FROM PESQUISADOR LEFT JOIN FAZ ON (CPF = CPF_F) LEFT JOIN PESQUISA ON (Título_F = Título)
+WHERE Título IS NULL;
+
+ -- Semi-junção
+SELECT Tema
+FROM CONGRESSO
+WHERE EXISTS 
+    (SELECT *
+     FROM APRESENTADA
+     WHERE Tema = Tema_A AND Situação = 'Reprovado');
+
+ -- Anti-junção
+SELECT Título
+FROM PESQUISA
+WHERE NOT EXISTS 
+    (SELECT *
+     FROM FINANCIA
+     WHERE Título = Título_FI);
 
  -- Subconsulta tipo escalar
 SELECT Nome
@@ -35,3 +59,11 @@ WHERE CPF IN
      r ON e.Cód_região_E = r.Cód_região
     );
 
+ -- Operação de conjunto
+SELECT CNPJ
+FROM ((SELECT CNPJ
+       FROM EMPRESA INNER JOIN RESERVA_AMBIENTAL ON (CNPJ = CNPJ_reserva))
+    INTERSECT
+      (SELECT CNPJ
+       FROM EMPRESA INNER JOIN FINANCIA ON (CNPJ = CNPJ_FI))
+);
