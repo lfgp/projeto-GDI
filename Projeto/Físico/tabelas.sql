@@ -89,7 +89,7 @@ create table ORIENTA(
 
 
 create table APRESENTADA(
-    	Cód_Congresso_A VARCHAR(30),
+    	Cód_Congresso_A INTEGER,
     	Título_A VARCHAR(30),
         Situação VARCHAR(30),
     	Constraint fk_APRESENTADA_CONGRESSO foreign key (Cód_Congresso_A) references CONGRESSO(Cód_Congresso),
