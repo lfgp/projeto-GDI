@@ -82,8 +82,8 @@ INSERT INTO PESQUISA VALUES ('Contaminação das plantas através de metais pesa
 
 INSERT INTO CONGRESSO VALUES('1212','Amazônia em alerta, os perigos do incêndio na fauna e flora.','2024','CBMA');
 INSERT INTO CONGRESSO VALUES('3223','A grande diversidade da flora nordestina.','2025','CNBIO');
-INSERT INTO CONGRESSO VALUES('1234','A beleza que destrói a natureza.','2022','CBMA');
-INSERT INTO CONGRESSO VALUES('5432','Alteração de habitat e seus perigos.','2023','CNBIO');
+INSERT INTO CONGRESSO VALUES('1234','A beleza que destrói a natureza.','2022','CNCMA');
+INSERT INTO CONGRESSO VALUES('5432','Alteração de habitat e seus perigos.','2023','CNCBIO');
 
 INSERT INTO FAZ VALUES('10101010','O impacto da criação de cosméticos com plantas nativas da amazônia');
 INSERT INTO FAZ VALUES('1111','A crise causada pela radiação nos animais aquáticos');
