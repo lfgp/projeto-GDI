@@ -68,7 +68,7 @@ Apresentada(<ins>Título,Cód_Congresso,situação</ins>);
 
       Título -> Pesquisa(Título)
 
-      Tema -> Congresso(Tema)
+      Cód_Congresso -> Congresso(Cód_Congresso)
 
 Preservada(<ins>Cód_região,CNPJ,responsável,Nome_científico</ins>,quantidade);
 
