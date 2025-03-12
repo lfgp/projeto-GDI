@@ -23,6 +23,8 @@ INSERT INTO ESPECIE VALUES ('Amaranthus viridis','bredo, caruru','Plantae','Magn
 INSERT INTO ESPECIE VALUES ('Rhea americana','ema, nandu, guaripé','Animalia','Chordata','Ave','Struthioniformes','Rheidae','Rhea');
 INSERT INTO ESPECIE VALUES ('Paullinia cupana','guaranazeiro, guaraná','Plantae','Magnoliophyta','Magnoliopsida','Sapindales','Sapindaceae','Paullinia');
 INSERT INTO ESPECIE VALUES ('Myloplus sauron','piranha vegetariana','Animalia','Chordata','Actinopterygii','Characiformes','Serrasalmidae','Myloplus');
+INSERT INTO ESPECIE VALUES ('Anodorhynchus hyacinthinus','arara azul, ararinha azul','Animália','Chordata','Aves','Psittaciformes','Psittacidae','Anodorhynchus');
+INSERT INTO ESPECIE VALUES ('Paubrasilia echinata','pau-brasil, pau-de-pernambuco','Plantae','	Magnoliophyta','Magnoliopsida','Fabales','Fabaceae','Paubrasilia');
 
 INSERT INTO ESTUDA VALUES ('1111','1','Panthera onca',TO_DATE('12/03/2023','DD/MM/YYYY'));
 INSERT INTO ESTUDA VALUES ('2222','2','Amaranthus viridis',TO_DATE('10/05/2022','DD/MM/YYYY'));
@@ -102,3 +104,6 @@ INSERT INTO APRESENTADA VALUES('Amazônia em alerta, os perigos do incêndio na 
 INSERT INTO APRESENTADA VALUES('A grande diversidade da flora nordestina.','Uma nova fonte alimentícia resurge no nordeste em meio ao aumento da cesta básica','Aprovado');
 INSERT INTO APRESENTADA VALUES('Alteração de habitat e seus perigos.','Contaminação das plantas através de metais pesados explorados no solo','Reprovado');
 INSERT INTO APRESENTADA VALUES('Alteração de habitat e seus perigos.','Alteração no habitat das aves e seu alimento com a construção de antenas em áreas remotas','Aprovado');
+
+INSERT INTO PRESERVADA VALUES ('11137051007946','3','Grupo Boticário','Anodorhynchus hyacinthinus','30');
+INSERT INTO PRESERVADA VALUES ('33592510000154','4','Vale S/A','Paubrasilia echinata','20');
