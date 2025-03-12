@@ -59,10 +59,11 @@ create table PESQUISA(
 
 
 create table CONGRESSO(
+        Cód_Congresso INTEGER,
         Tema VARCHAR(30),
         Ano INTEGER,
         Sigla VARCHAR(30),
-        constraint pk_Congresso primary key (Tema) 
+        constraint pk_Congresso primary key (Cód_Congresso) 
 );
 
 
@@ -88,12 +89,12 @@ create table ORIENTA(
 
 
 create table APRESENTADA(
-    	Tema_A VARCHAR(30),
+    	Cód_Congresso_A VARCHAR(30),
     	Título_A VARCHAR(30),
         Situação VARCHAR(30),
-    	Constraint fk_APRESENTADA_CONGRESSO foreign key (Tema_A) references CONGRESSO(Tema),
+    	Constraint fk_APRESENTADA_CONGRESSO foreign key (Cód_Congresso_A) references CONGRESSO(Cód_Congresso),
     	Constraint fk_APRESENTADA_PESQUISA foreign key (Título_A) references PESQUISA(Título),
-    	Constraint pk_APRESENTADA primary key (Tema_A,Título_A)
+    	Constraint pk_APRESENTADA primary key (Cód_Congresso_A,Título_A)
 );
 
 
