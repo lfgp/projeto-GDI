@@ -16,7 +16,7 @@ Nome_popular(Nome_científico,nome_popular);
 
 Pesquisa(<ins>Título</ins>,resultado,metodologia);
 
-Congresso(<ins>Tema</ins>,ano,sigla);
+Congresso(<ins>Cód_Congresso</ins>,tema,ano,sigla);
 
 Empresa(<ins>CNPJ</ins>,nome_fantasia);
 
@@ -64,7 +64,7 @@ Financia(<ins>CNPJ,CPF,Título</ins>);
 
       CNPJ -> Empresa(CNPJ)
 
-Apresentada(<ins>Título,Tema,situação</ins>);
+Apresentada(<ins>Título,Cód_Congresso,situação</ins>);
 
       Título -> Pesquisa(Título)
 
