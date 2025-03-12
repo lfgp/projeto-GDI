@@ -19,7 +19,7 @@ FROM CONGRESSO
 WHERE EXISTS 
     (SELECT *
      FROM APRESENTADA
-     WHERE Cód_congresso = Cód_congresso_A AND Situação = 'Reprovado');
+     WHERE Cód_Congresso = Cód_Congresso_A AND Situação = 'Reprovado');
 
  -- Anti-junção
 SELECT Título
