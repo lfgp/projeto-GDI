@@ -80,10 +80,10 @@ INSERT INTO PESQUISA VALUES ('Como a vegetação do Cerrado sobrevive às queima
 INSERT INTO PESQUISA VALUES ('Uma nova fonte alimentícia resurge no nordeste em meio ao aumento da cesta básica','Povos atuais redescobrem planta que já era utilizada por indígenas na alimentação.','Estudo base na cultura indígena, povos mais antigos e pessoas de baixa renda em situações extremas.');
 INSERT INTO PESQUISA VALUES ('Contaminação das plantas através de metais pesados explorados no solo','Utilização de métodos agressivos contaminam o solo, consequentemente as plantas na região explorada.','Estudo de 20 anos realizado nas regiões de exploração revelam que as plantas ainda contém resquícios de contaminação.');
 
-INSERT INTO CONGRESSO VALUES('Amazônia em alerta, os perigos do incêndio na fauna e flora.','2024','CBMA');
-INSERT INTO CONGRESSO VALUES('A grande diversidade da flora nordestina.','2025','CNBIO');
-INSERT INTO CONGRESSO VALUES('A beleza que destrói a natureza.','2022','CBMA');
-INSERT INTO CONGRESSO VALUES('Alteração de habitat e seus perigos.','2023','CNBIO');
+INSERT INTO CONGRESSO VALUES('1212','Amazônia em alerta, os perigos do incêndio na fauna e flora.','2024','CBMA');
+INSERT INTO CONGRESSO VALUES('3223','A grande diversidade da flora nordestina.','2025','CNBIO');
+INSERT INTO CONGRESSO VALUES('1234','A beleza que destrói a natureza.','2022','CBMA');
+INSERT INTO CONGRESSO VALUES('5432','Alteração de habitat e seus perigos.','2023','CNBIO');
 
 INSERT INTO FAZ VALUES('10101010','O impacto da criação de cosméticos com plantas nativas da amazônia');
 INSERT INTO FAZ VALUES('1111','A crise causada pela radiação nos animais aquáticos');
@@ -98,12 +98,12 @@ INSERT INTO FINANCIA VALUES('7777','Alteração no habitat das aves e seu alimen
 INSERT INTO FINANCIA VALUES('9999','Como a vegetação do Cerrado sobrevive às queimadas naturais','89637490000145');
 INSERT INTO FINANCIA VALUES('6666','Contaminação das plantas através de metais pesados explorados no solo','33592510000154');
 
-INSERT INTO APRESENTADA VALUES('A beleza que destrói a natureza.','O impacto da criação de cosméticos com plantas nativas da amazônia','Aprovado');
-INSERT INTO APRESENTADA VALUES('Amazônia em alerta, os perigos do incêndio na fauna e flora.','O impacto da criação de cosméticos com plantas nativas da amazônia','Reprovado');
-INSERT INTO APRESENTADA VALUES('Amazônia em alerta, os perigos do incêndio na fauna e flora.','Como a vegetação do Cerrado sobrevive às queimadas naturais','Aprovado');
-INSERT INTO APRESENTADA VALUES('A grande diversidade da flora nordestina.','Uma nova fonte alimentícia resurge no nordeste em meio ao aumento da cesta básica','Aprovado');
-INSERT INTO APRESENTADA VALUES('Alteração de habitat e seus perigos.','Contaminação das plantas através de metais pesados explorados no solo','Reprovado');
-INSERT INTO APRESENTADA VALUES('Alteração de habitat e seus perigos.','Alteração no habitat das aves e seu alimento com a construção de antenas em áreas remotas','Aprovado');
+INSERT INTO APRESENTADA VALUES('1234','O impacto da criação de cosméticos com plantas nativas da amazônia','Aprovado');
+INSERT INTO APRESENTADA VALUES('1212','O impacto da criação de cosméticos com plantas nativas da amazônia','Reprovado');
+INSERT INTO APRESENTADA VALUES('1212','Como a vegetação do Cerrado sobrevive às queimadas naturais','Aprovado');
+INSERT INTO APRESENTADA VALUES('3223','Uma nova fonte alimentícia resurge no nordeste em meio ao aumento da cesta básica','Aprovado');
+INSERT INTO APRESENTADA VALUES('5432','Contaminação das plantas através de metais pesados explorados no solo','Reprovado');
+INSERT INTO APRESENTADA VALUES('5432','Alteração no habitat das aves e seu alimento com a construção de antenas em áreas remotas','Aprovado');
 
 INSERT INTO PRESERVADA VALUES ('11137051007946','3','Grupo Boticário','Anodorhynchus hyacinthinus','30');
 INSERT INTO PRESERVADA VALUES ('33592510000154','4','Vale S/A','Paubrasilia echinata','20');
