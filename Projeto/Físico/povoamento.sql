@@ -27,14 +27,14 @@ INSERT INTO ESPECIE VALUES ('Anodorhynchus hyacinthinus','Animália','Chordata',
 INSERT INTO ESPECIE VALUES ('Paubrasilia echinata','Plantae','Magnoliophyta','Magnoliopsida','Fabales','Fabaceae','Paubrasilia');
 
 INSERT INTO NOMEPOPULAR VALUES ('Panthera onca','onça pintada, jaguar');
-INSERT INTO ESPECIE VALUES ('Handroanthus albus','aipê, ipê-amarelo, ipê-ouro');
-INSERT INTO ESPECIE VALUES ('Caiman latirostris','jacaré do papo amarelo');
-INSERT INTO ESPECIE VALUES ('Amaranthus viridis','bredo, caruru');
-INSERT INTO ESPECIE VALUES ('Rhea americana','ema, nandu, guaripé');
-INSERT INTO ESPECIE VALUES ('Paullinia cupana','guaranazeiro, guaraná');
-INSERT INTO ESPECIE VALUES ('Myloplus sauron','piranha vegetariana');
-INSERT INTO ESPECIE VALUES ('Anodorhynchus hyacinthinus','arara azul, ararinha azul');
-INSERT INTO ESPECIE VALUES ('Paubrasilia echinata','pau-brasil, pau-de-pernambuco');
+INSERT INTO NOMEPOPULAR VALUES ('Handroanthus albus','aipê, ipê-amarelo, ipê-ouro');
+INSERT INTO NOMEPOPULAR VALUES ('Caiman latirostris','jacaré do papo amarelo');
+INSERT INTO NOMEPOPULAR VALUES ('Amaranthus viridis','bredo, caruru');
+INSERT INTO NOMEPOPULAR VALUES ('Rhea americana','ema, nandu, guaripé');
+INSERT INTO NOMEPOPULAR VALUES ('Paullinia cupana','guaranazeiro, guaraná');
+INSERT INTO NOMEPOPULAR VALUES ('Myloplus sauron','piranha vegetariana');
+INSERT INTO NOMEPOPULAR VALUES ('Anodorhynchus hyacinthinus','arara azul, ararinha azul');
+INSERT INTO NOMEPOPULAR VALUES ('Paubrasilia echinata','pau-brasil, pau-de-pernambuco');
 
 INSERT INTO ESTUDA VALUES ('1111','1','Panthera onca',TO_DATE('12/03/2023','DD/MM/YYYY'));
 INSERT INTO ESTUDA VALUES ('2222','2','Amaranthus viridis',TO_DATE('10/05/2022','DD/MM/YYYY'));
