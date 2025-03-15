@@ -24,7 +24,7 @@ INSERT INTO ESPECIE VALUES ('Rhea americana','Animalia','Chordata','Ave','Struth
 INSERT INTO ESPECIE VALUES ('Paullinia cupana','Plantae','Magnoliophyta','Magnoliopsida','Sapindales','Sapindaceae','Paullinia');
 INSERT INTO ESPECIE VALUES ('Myloplus sauron','Animalia','Chordata','Actinopterygii','Characiformes','Serrasalmidae','Myloplus');
 INSERT INTO ESPECIE VALUES ('Anodorhynchus hyacinthinus','Animália','Chordata','Aves','Psittaciformes','Psittacidae','Anodorhynchus');
-INSERT INTO ESPECIE VALUES ('Paubrasilia echinata','Plantae','	Magnoliophyta','Magnoliopsida','Fabales','Fabaceae','Paubrasilia');
+INSERT INTO ESPECIE VALUES ('Paubrasilia echinata','Plantae','Magnoliophyta','Magnoliopsida','Fabales','Fabaceae','Paubrasilia');
 
 INSERT INTO NOMEPOPULAR VALUES ('Panthera onca','onça pintada, jaguar');
 INSERT INTO ESPECIE VALUES ('Handroanthus albus','aipê, ipê-amarelo, ipê-ouro');
