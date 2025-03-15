@@ -21,7 +21,7 @@ create table REGIAO(
 create table EMPRESA( 
    	CNPJ INTEGER, 
    	Nome_Fantasia  VARCHAR(30),
-       Ramo VARCHAR(10), 
+        Ramo VARCHAR(10), 
    	constraint pk_empresa primary key (CNPJ) 
  );
  
