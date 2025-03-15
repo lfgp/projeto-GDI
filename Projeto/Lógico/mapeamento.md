@@ -18,15 +18,9 @@ Pesquisa(<ins>Título</ins>,resultado,metodologia);
 
 Congresso(<ins>Cód_Congresso</ins>,tema,ano,sigla);
 
-Empresa(<ins>CNPJ</ins>,nome_fantasia);
+EmpresaPública(<ins>CNPJ</ins>,nome_fantasia,ramo,órgão_regulador);
 
-Pública(<ins>CNPJ,órgão_regulador</ins>);
-
-      CNPJ -> Empresa(CNPJ)
-
-Privada(<ins>CNPJ,natureza_jurídica</ins>);
-
-      CNPJ-> Empresa(CNPJ)
+EmpresaPrivada(<ins>CNPJ</ins>,nome_fantasia,ramo,natureza_jurídica);
 
 Reserva_ambiental(<ins>Cód_região,CNPJ,Responsável</ins>);
 
