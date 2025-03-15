@@ -18,27 +18,21 @@ create table REGIAO(
         constraint pk_regiao primary key (Cód_região) 
 );
 
-create table EMPRESA( 
-  	CNPJ INTEGER, 
+create table EMPRESAPUBLICA( 
+  	CNPJ_Pu INTEGER, 
   	Nome_Fantasia  VARCHAR(30),
         Ramo VARCHAR(10), 
-  	constraint pk_empresa primary key (CNPJ) 
+    Órgão_Regulador VARCHAR(30),
+  	constraint pk_EMPRESAPUBLICA primary key (CNPJ_Pu) 
 );
 
-create table PUBLICA( 
-    CNPJ_P INTEGER, 
-    Órgão_Regulador VARCHAR(30), 
-     
-    constraint fk_EMPRESAPUBLICA foreign key (CNPJ_P) references EMPRESA(CNPJ), 
-    constraint pk_PUBLICA primary key (CNPJ_P,Órgão_Regulador) 
-);
-
-create table PRIVADA(
-    CNPJ_Pv INTEGER,
+create table EMPRESAPRIVADA(
+    CNPJ_Pv INTEGER, 
+  	Nome_Fantasia  VARCHAR(30),
+        Ramo VARCHAR(10), 
     Natureza_Jurídica VARCHAR(30),
     
-    constraint fk_EMPRESAPRIVADA foreign key (CNPJ_Pv) references EMPRESA(CNPJ),
-    constraint pk_PRIVADA primary key (CNPJ_Pv,Natureza_Jurídica)
+    constraint pk_EMPRESAPRIVADA primary key (CNPJ_Pv)
 );
 
 create table PESQUISADOR(
