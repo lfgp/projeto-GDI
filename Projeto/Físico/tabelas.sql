@@ -1,6 +1,5 @@
 create table ESPECIE( 
-  	Nome_científico VARCHAR(30), 
-  	Nome_popular VARCHAR(30), 
+  	Nome_científico VARCHAR(30),  
         Taxonomia_Reino VARCHAR(30), 
  	Taxonomia_Filo VARCHAR(30), 
         Taxonomia_Classe VARCHAR(30),
@@ -9,6 +8,13 @@ create table ESPECIE(
         Taxonomia_Gênero VARCHAR(30),
         constraint pk_especie primary key (Nome_científico) 
 );
+
+create table NOMEPOPULAR( 
+Nome_científico_Pop VARCHAR(30), 
+  	Nome_popular VARCHAR(30),
+  Constraint pk_NOMEPOPULAR primary key (Nome_científico_Pop,Nome_popular
+  );
+
 
 create table REGIAO( 
         Cód_região INTEGER, 
