@@ -39,6 +39,7 @@ create table EMPRESA(
  
      constraint fk_EMPRESAPRIVADA foreign key (CNPJ_Pv) references EMPRESA(CNPJ),
      constraint pk_PRIVADA primary key (CNPJ_Pv,Natureza_Jurídica)
+  );
 
 create table PESQUISADOR(
         CPF VARCHAR(20),
