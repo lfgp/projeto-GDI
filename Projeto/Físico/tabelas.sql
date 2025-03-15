@@ -12,7 +12,7 @@ create table ESPECIE(
 create table NOMEPOPULAR( 
 	Nome_científico_Pop VARCHAR(30), 
   	Nome_popular VARCHAR(30),
-  Constraint pk_NOMEPOPULAR primary key (Nome_científico_Pop,Nome_popular
+  Constraint pk_NOMEPOPULAR primary key (Nome_científico_Pop,Nome_popular)
   );
 
 
