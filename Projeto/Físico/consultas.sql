@@ -57,7 +57,7 @@ WHERE CPF IN
          FROM REGIAO  INNER JOIN BIOMA ON (Cód_região = Cód_regiãoB) 
          WHERE BIOMA LIKE '%AMAZÔNIA%')  
      r ON e.Cód_região_E = r.Cód_região 
-    )
+    );
 
  -- Operação de conjunto
 SELECT CNPJ
