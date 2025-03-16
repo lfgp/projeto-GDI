@@ -24,6 +24,12 @@ create table REGIAO(
         constraint pk_regiao primary key (Cód_região) 
 );
 
+create table BIOMA( 
+        Cód_regiãoB INTEGER, 
+        Bioma VARCHAR(40),
+        constraint pk_BIOMA primary key (Cód_regiãoB,Bioma) 
+);
+
 create table EMPRESA( 
    	CNPJ INTEGER, 
    	Nome_Fantasia  VARCHAR(30),
