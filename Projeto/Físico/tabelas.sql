@@ -111,7 +111,7 @@ create table APRESENTADA(
 
 create table FAZ(
     	CPF_F VARCHAR(20),
-    	Título_F VARCHAR(30),
+    	Título_F VARCHAR(100),
     	Constraint fk_FAZ_PESQUISADOR foreign key (CPF_F) references PESQUISADOR(CPF),
     	Constraint fk_FAZ_PESQUISA foreign key (Título_F) references PESQUISA(Título),
     	Constraint pk_FAZ primary key (CPF_F,Título_F)
