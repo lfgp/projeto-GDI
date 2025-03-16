@@ -48,16 +48,16 @@ WHERE CPF_E IN
     );
 
  -- Subconsulta tipo tabela
-SELECT Nome
-FROM PESQUISADOR
-WHERE CPF IN 
-    (SELECT DISTINCT e.CPF_E
-     FROM ESTUDA e INNER JOIN 
-    	(SELECT Cód_região
-         FROM REGIAO
-         WHERE BIOMA LIKE '%AMAZÔNIA%') 
-     r ON e.Cód_região_E = r.Cód_região
-    );
+SELECT Nome 
+FROM PESQUISADOR 
+WHERE CPF IN  
+    (SELECT DISTINCT e.CPF_E 
+     FROM ESTUDA e INNER JOIN  
+    	(SELECT Cód_região 
+         FROM REGIAO  INNER JOIN BIOMA ON (Cód_região = Cód_regiãoB) 
+         WHERE BIOMA LIKE '%AMAZÔNIA%')  
+     r ON e.Cód_região_E = r.Cód_região 
+    )
 
  -- Operação de conjunto
 SELECT CNPJ
