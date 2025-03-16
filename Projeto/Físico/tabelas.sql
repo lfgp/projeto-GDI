@@ -20,7 +20,6 @@ create table REGIAO(
         Cód_região INTEGER, 
         Coordenadas_Latitude INTEGER, 
         Coordenadas_Longitude INTEGER,
-        Bioma VARCHAR(40),
         constraint pk_regiao primary key (Cód_região) 
 );
 
@@ -33,7 +32,7 @@ create table BIOMA(
 create table EMPRESA( 
    	CNPJ INTEGER, 
    	Nome_Fantasia  VARCHAR(30),
-        Ramo VARCHAR(10), 
+        Ramo VARCHAR(30), 
    	constraint pk_empresa primary key (CNPJ) 
  );
  
@@ -63,16 +62,16 @@ create table PESQUISADOR(
 
 
 create table PESQUISA(
-        Título VARCHAR(30),
-        Resultado VARCHAR(50),
-        Metodologia VARCHAR(50),
+        Título VARCHAR(100),
+        Resultado VARCHAR(150),
+        Metodologia VARCHAR(150),
         constraint pk_pequisa primary key (Título) 
 );
 
 
 create table CONGRESSO(
         Cód_Congresso INTEGER,
-        Tema VARCHAR(30),
+        Tema VARCHAR(80),
         Ano INTEGER,
         Sigla VARCHAR(30),
         constraint pk_Congresso primary key (Cód_Congresso) 
@@ -102,7 +101,7 @@ create table ORIENTA(
 
 create table APRESENTADA(
     	Cód_Congresso_A INTEGER,
-    	Título_A VARCHAR(30),
+    	Título_A VARCHAR(100),
         Situação VARCHAR(30),
     	Constraint fk_APRESENTADA_CONGRESSO foreign key (Cód_Congresso_A) references CONGRESSO(Cód_Congresso),
     	Constraint fk_APRESENTADA_PESQUISA foreign key (Título_A) references PESQUISA(Título),
@@ -121,7 +120,7 @@ create table FAZ(
 
 create table FINANCIA(
     	CPF_FI VARCHAR(20),
-    	Título_FI VARCHAR(30),
+    	Título_FI VARCHAR(100),
     	CNPJ_FI INTEGER,
 
     	Constraint fk_FINANCIA_FAZ foreign key (CPF_FI,Título_FI) references FAZ(CPF_F,Título_F),
