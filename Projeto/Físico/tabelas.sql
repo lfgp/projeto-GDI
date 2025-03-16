@@ -97,7 +97,7 @@ create table ORIENTA(
     	Constraint fk_ORIENTA_Aluno foreign key (CPF_Aluno) references PESQUISADOR(CPF),
     	Constraint fk_ORIENTA_Professor foreign key (CPF_Professor) references PESQUISADOR(CPF),
     	Constraint pk_ORIENTA_Aluno primary key (CPF_Aluno)
-)
+);
 
 
 create table APRESENTADA(
