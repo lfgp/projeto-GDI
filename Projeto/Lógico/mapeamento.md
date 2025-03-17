@@ -20,11 +20,11 @@ Congresso(<ins>Cód_Congresso</ins>,tema,ano,sigla);
 
 Empresa(<ins>CNPJ</ins>,nome_fantasia,ramo);
 
-Pública(<ins>CNPJ,órgão_regulador</ins>);
+Pública(<ins>CNPJ</ins>,órgão_regulador);
         
         CNPJ -> Empresa(CNPJ)
 
-EmpresaPrivada(<ins>CNPJ,natureza_jurídica</ins>);
+EmpresaPrivada(<ins>CNPJ</ins>,natureza_jurídica);
 
         CNPJ -> Empresa(CNPJ)
 
