@@ -41,7 +41,7 @@ create table EMPRESA(
      Órgão_Regulador VARCHAR(30), 
       
      constraint fk_EMPRESAPUBLICA foreign key (CNPJ_P) references EMPRESA(CNPJ), 
-     constraint pk_PUBLICA primary key (CNPJ_P,Órgão_Regulador) 
+     constraint pk_PUBLICA primary key (CNPJ_P) 
  );
  
  create table PRIVADA(
@@ -49,7 +49,7 @@ create table EMPRESA(
      Natureza_Jurídica VARCHAR(30),
  
      constraint fk_EMPRESAPRIVADA foreign key (CNPJ_Pv) references EMPRESA(CNPJ),
-     constraint pk_PRIVADA primary key (CNPJ_Pv,Natureza_Jurídica)
+     constraint pk_PRIVADA primary key (CNPJ_Pv)
   );
 
 create table PESQUISADOR(
