@@ -179,5 +179,5 @@ BEGIN
     END IF;
 EXCEPTION
     WHEN ESPECIALIZACAO_INCORRETA THEN
-    Raise_application_error(-20202, 'Especialização incorreta.' || ' Não é possível inserir Especialização fora da área biológica!');
+    Raise_application_error('Coletor', 'Especialização incorreta.' || ' Não é possível inserir Especialização fora da área biológica!');
 END;
