@@ -69,3 +69,19 @@ FROM ((SELECT CNPJ
       (SELECT CNPJ
        FROM EMPRESA INNER JOIN FINANCIA ON (CNPJ = CNPJ_FI))
 );
+
+--TRIGGER que não permite inserção de campo coletor em Especialização
+CREATE OR REPLACE TRIGGER ESPECIALIZACAO_INCORRETA
+BEFORE INSERT ON PESQUISADOR
+FOR EACH ROW
+DECLARE
+    ESPECIALIZACAO_INCORRETA EXCEPTION;
+BEGIN
+    IF : NEW.Especialização = 'Coletor' THEN
+        DBMS_OUTPUT.PUT_LINE('Especialização incorreta');
+        RAISE ESPECIALIZACAO_INCORRETA;
+    END IF;
+EXCEPTION
+    WHEN ESPECIALIZACAO_INCORRETA THEN
+    Raise_application_error('Coletor', 'Especialização incorreta.' || ' Não é possível inserir Especialização fora da área biológica!');
+END;
