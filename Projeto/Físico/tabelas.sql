@@ -165,19 +165,3 @@ create table PRESERVADA(
     	Constraint fk_PRESERVADA_ESPECIE foreign key (Nome_científico_Pr) references ESPECIE(Nome_científico),
     	Constraint pk_PRESERVADA primary key (CNPJ_Pr,Cód_região_Pr,Responsável_Pr,Nome_científico_Pr)
 );
-
---TRIGGER que não permite inserção de campo coletor em Especialização
-CREATE OR REPLACE TRIGGER ESPECIALIZACAO_INCORRETA
-BEFORE INSERT ON PESQUISADOR
-FOR EACH ROW
-DECLARE
-    ESPECIALIZACAO_INCORRETA EXCEPTION;
-BEGIN
-    IF : NEW.Especialização = 'Coletor' THEN
-        DBMS_OUTPUT.PUT_LINE('Especialização incorreta');
-        RAISE ESPECIALIZACAO_INCORRETA;
-    END IF;
-EXCEPTION
-    WHEN ESPECIALIZACAO_INCORRETA THEN
-    Raise_application_error('Coletor', 'Especialização incorreta.' || ' Não é possível inserir Especialização fora da área biológica!');
-END;
