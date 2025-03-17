@@ -35,7 +35,7 @@ FROM PESQUISADOR
 WHERE CPF IN 
     (SELECT p.CPF
      FROM PESQUISADOR p INNER JOIN ORIENTA o ON p.CPF = o.CPF_Professor
- 	   WHERE o.CPF_Professor = '6666'
+ 	   WHERE o.CPF_Professor = '5555'
     );
 
 -- Subconsulta tipo linha
