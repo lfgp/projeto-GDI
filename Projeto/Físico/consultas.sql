@@ -19,7 +19,8 @@ FROM CONGRESSO
 WHERE EXISTS 
     (SELECT *
      FROM APRESENTADA
-     WHERE Cód_Congresso = Cód_Congresso_A AND Situação = 'Reprovado');
+     WHERE Cód_Congresso = Cód_Congresso_A AND Situação = 'Reprovado'
+    );
 
  -- Anti-junção
 SELECT Título
@@ -27,14 +28,15 @@ FROM PESQUISA
 WHERE NOT EXISTS 
     (SELECT *
      FROM FINANCIA
-     WHERE Título = Título_FI);
+     WHERE Título = Título_FI
+    );
 
  -- Subconsulta tipo escalar
 SELECT Nome
 FROM PESQUISADOR
 WHERE CPF IN 
     (SELECT p.CPF
-     FROM PESQUISADOR p INNER JOIN ORIENTA o ON p.CPF = o.CPF_Professor
+     FROM PESQUISADOR p INNER JOIN ORIENTA o ON (p.CPF = o.CPF_Professor)
  	   WHERE o.CPF_Professor = '5555'
     );
 
@@ -56,7 +58,7 @@ WHERE CPF IN
     	(SELECT Cód_região 
          FROM REGIAO  INNER JOIN BIOMA ON (Cód_região = Cód_regiãoB) 
          WHERE BIOMA LIKE '%AMAZÔNIA%')  
-     r ON e.Cód_região_E = r.Cód_região 
+     r ON (e.Cód_região_E = r.Cód_região) 
     );
 
  -- Operação de conjunto
