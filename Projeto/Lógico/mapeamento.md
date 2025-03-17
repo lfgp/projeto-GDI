@@ -10,7 +10,7 @@ Bioma(<ins>Cód_região,bioma</ins>);
 
 Espécie(<ins>Nome_científico</ins>,tax_Reino, tax_Filo, tax_Classe, tax_Ordem, tax_Família, tax_Gênero);
 
-Nome_popular(Nome_científico,nome_popular);
+Nome_popular(<ins>Nome_científico,nome_popular</ins>);
 
       Nome_científico -> Espécie(Nome_científico)
 
@@ -18,9 +18,15 @@ Pesquisa(<ins>Título</ins>,resultado,metodologia);
 
 Congresso(<ins>Cód_Congresso</ins>,tema,ano,sigla);
 
-EmpresaPública(<ins>CNPJ</ins>,nome_fantasia,ramo,órgão_regulador);
+Empresa(<ins>CNPJ</ins>,nome_fantasia,ramo);
 
-EmpresaPrivada(<ins>CNPJ</ins>,nome_fantasia,ramo,natureza_jurídica);
+Pública(<ins>CNPJ,órgão_regulador</ins>);
+        
+        CNPJ -> Empresa(CNPJ)
+
+EmpresaPrivada(<ins>CNPJ,natureza_jurídica</ins>);
+
+        CNPJ -> Empresa(CNPJ)
 
 Reserva_ambiental(<ins>Cód_região,CNPJ,Responsável</ins>);
 
