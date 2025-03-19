@@ -10,8 +10,8 @@ FROM PESQUISADOR INNER JOIN FAZ ON (CPF = CPF_F);
 
  -- Junção externa
 SELECT CPF, Nome
-FROM PESQUISADOR LEFT JOIN FAZ ON (CPF = CPF_F) LEFT JOIN PESQUISA ON (Título_F = Título)
-WHERE Título IS NULL;
+FROM PESQUISADOR LEFT JOIN FAZ ON (CPF = CPF_F)
+WHERE Título_F IS NULL;
 
  -- Semi-junção
 SELECT Tema
@@ -35,9 +35,9 @@ WHERE NOT EXISTS
 SELECT Nome
 FROM PESQUISADOR
 WHERE CPF IN 
-    (SELECT p.CPF
-     FROM PESQUISADOR p INNER JOIN ORIENTA o ON (p.CPF = o.CPF_Professor)
- 	   WHERE o.CPF_Professor = '5555'
+    (SELECT CPF
+     FROM PESQUISADOR INNER JOIN ORIENTA ON (CPF = CPF_Professor)
+ 	   WHERE CPF_Professor = '5555'
     );
 
 -- Subconsulta tipo linha
@@ -53,12 +53,12 @@ WHERE CPF_E IN
 SELECT Nome 
 FROM PESQUISADOR 
 WHERE CPF IN  
-    (SELECT DISTINCT e.CPF_E 
-     FROM ESTUDA e INNER JOIN  
-    	(SELECT Cód_região 
+    (SELECT DISTINCT CPF_E 
+     FROM ESTUDA INNER JOIN  
+    	   (SELECT Cód_região 
          FROM REGIAO  INNER JOIN BIOMA ON (Cód_região = Cód_regiãoB) 
          WHERE BIOMA LIKE 'AMAZÔNIA')  
-     r ON (e.Cód_região_E = r.Cód_região) 
+      ON (Cód_região_E = Cód_região) 
     );
 
  -- Operação de conjunto
