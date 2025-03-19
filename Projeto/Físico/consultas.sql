@@ -5,8 +5,8 @@ GROUP BY Especialização
 HAVING COUNT(*) > 3;
 
 -- Junção interna
-SELECT Nome, Título
-FROM PESQUISADOR INNER JOIN FAZ ON (CPF = CPF_F) INNER JOIN PESQUISA ON (Título_F = Título);
+SELECT Nome, Título_F
+FROM PESQUISADOR INNER JOIN FAZ ON (CPF = CPF_F);
 
  -- Junção externa
 SELECT CPF, Nome
