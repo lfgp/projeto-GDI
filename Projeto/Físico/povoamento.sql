@@ -97,12 +97,12 @@ INSERT INTO PRIVADA VALUES ('33592510000154','S/A');
 INSERT INTO PRIVADA VALUES ('89637490000145','S/A');
 INSERT INTO PRIVADA VALUES ('71673990000177','S/A');
 
-INSERT INTO RESERVA_AMBIENTAL VALUES ('11137051007946','3','Grupo Boticário');
-INSERT INTO RESERVA_AMBIENTAL VALUES ('23637697000101','4','Alcoa Alumínio S/A');
-INSERT INTO RESERVA_AMBIENTAL VALUES ('33611500000119','4','metalúrgica Gerdau');
-INSERT INTO RESERVA_AMBIENTAL VALUES ('33592510000154','4','Vale S/A');
-INSERT INTO RESERVA_AMBIENTAL VALUES ('89637490000145','5','Companhia Klabin');
-INSERT INTO RESERVA_AMBIENTAL VALUES ('11137051007946','5','Grupo Boticário');
+INSERT INTO RESERVA_AMBIENTAL VALUES ('11137051007946','3','Josué');
+INSERT INTO RESERVA_AMBIENTAL VALUES ('23637697000101','4','Amanda');
+INSERT INTO RESERVA_AMBIENTAL VALUES ('33611500000119','4','George');
+INSERT INTO RESERVA_AMBIENTAL VALUES ('33592510000154','4','Vitória');
+INSERT INTO RESERVA_AMBIENTAL VALUES ('89637490000145','5','Cláudio');
+INSERT INTO RESERVA_AMBIENTAL VALUES ('11137051007946','5','Beatriz');
 
 INSERT INTO PESQUISA VALUES ('O impacto da criação de cosméticos com plantas nativas da amazônia','Possível extinção em menos de 10 anos.','Observação na quantidade de plantas da região nos últimos 5 anos.');
 INSERT INTO PESQUISA VALUES ('A crise causada pela radiação nos animais aquáticos','Grandes perdas de espécies devido a morte por radiação, gerando uma reação em cadeia.','Relatório de outras catástrofes por radiação nuclear e simulações no computador.');
